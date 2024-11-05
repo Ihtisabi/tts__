@@ -1,0 +1,96 @@
+body {
+    background-image: url('you.png'); 
+    background-size: cover; /* Mengatur agar gambar menutupi seluruh area */
+}
+
+table {
+    text-align: center;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+}
+
+td input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.block {
+    background-color: none;
+    position: relative;
+}
+.block:hover {
+    background-color: grey; 
+}
+
+.number-label {
+    position: absolute;
+    top: 5px; 
+    left: 5px; 
+    font-size: 9px; 
+    color: #555; 
+}
+.number-label-double {
+    position: absolute;
+    bottom: 0px; 
+    left: 5px; 
+    font-size: 9px; 
+    color: #555; 
+}
+
+.transparent {
+    background-color: none; 
+}
+
+.header {
+    background-color: #f2ecec; 
+    padding: 30px 0; 
+    margin-bottom: 50px;
+    z-index: 1000; 
+}
+
+.header h1 {
+    color: #613b64; 
+    text-align: center; 
+}
+
+.fixed-top {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+}
+.custom-margin {
+    margin-left: 5px; 
+}
+.rules-box {
+    background-color: none; 
+    padding: 3px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.rules-content {
+    display: none; 
+}
+.btn-grey, .btn-sukses {
+    background-color: #613b64;
+    color: white; 
+    border: none; 
+}
+
+.btn-link {
+    color: #613b64; 
+    text-decoration: underline; 
+}
+
+.btn-link:hover {
+    color: black; 
+    text-decoration: underline; 
+}
+
+

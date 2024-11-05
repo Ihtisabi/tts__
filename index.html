@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Teka Teki Silang</title>
+</head>
+
+<body>
+    
+    <div class="header ">
+        <h1 class="text-center my-4">Global Languages Crossword Challenge</h1>
+    </div>
+    <div class="container mt-4">
+        <div class="rules-box">
+            <h5>Peraturan:<button class="btn btn-link" id="toggle-rules">Unhide</button></h5>
+            
+            <div class="rules-content">
+                <ul>
+                    <li>1 soal benar mendapat 20 poin</li>
+                    <li>1 soal salah mendapat -5 poin</li>
+                    <li>Soal yang tidak dijawab sempurna atau mengosongkan jawaban mendapat 0 poin</li>
+                    <li>Maksimal total skor = 200 poin</li>
+                    <li>Setelah klik "Submit", akan diberitahu ringkasan hasil jawabannya beserta skor nya</li>
+                    <li>Klik "Perbaiki Jawaban" jika ingin memperbaiki jawaban yang salah</li>
+                    <li>Kesempatan Perbaiki Jawaban hanya diberikan 1 kali kesempatan saja</li>
+                    <li>Klik "Selesai" untuk menyelesaikan permainan</li>
+                </ul>
+            </div>
+        </div>
+    <div class="container mt-4">    
+        <div class="row">
+            <div class="col align-self-center">
+                <h4>Mendatar</h4>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>1. Bahasa Asia yang paling mudah dipelajari</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="d1"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>2. Bahasa china pinyin dari "cantik"</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="d2"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>3. Bahasa yang menjadi dasar bagi banyak bahasa Romawi</p>
+                        <p>modern, termasuk Spanyol, Prancis, dan Italia?</p>
+                    </div>
+                    <div class="custom-margin"><button type="button" name="d3"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>4. "Привет" termasuk ke dalam Bahasa</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="d4"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>5. Bahasa italia yang diucapkan ketika bersulang</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="d5"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+
+                <h4>Menurun</h4>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>6. Bahasa tertua di dunia</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="m1"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>7. Bahasa dengan penutur terbanyak di didunia</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="m2"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>8. Bahasa prancis dari "selamat malam"</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="m3"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>9. Bahasa resmi ASEAN</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="m4"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="pr-2">
+                        <p>10. Bahasa korea dari "sepatu"</p>
+                    </div>
+                    <div class="pr-2"><button type="button" name="m5"
+                            class="btn btn-grey btn-sm align-self-center">PILIH</button>
+                    </div>
+                </div>
+
+                <div class="submit-container mt-3">
+                    <button class="btn btn-sukses" onclick="submitAnswers()">Submit</button>
+                    <p id="result" style="margin-top: 20px;"></p>
+                </div>
+            </div>
+
+            <div class="col">
+                <table class=" tabel">
+                    <tr>
+                        <td class="block"><div class="number-label">8</div><input class="m3" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><div class="number-label">2</div><input class="d2" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d2" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d2" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d2" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d2" type="text" maxlength="1"></td>
+                        <td class="block"><div class="number-label">9</div><input class="d2 m4" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d2" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d2" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d2" type="text" maxlength="1"></td>
+                    </tr>
+                    <tr>
+
+                        <td class="block"><input class="m3" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m4" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="block"><input class="m3" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><div class="number-label">7</div><input class="m2" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m4" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="block"><input class="m3" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m2" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m4" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="block"><input class="m3" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m2" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m4" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="block"><div class="number-label">1</div><input class=" m3 d1" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d1" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d1" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d1" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d1 m2" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d1" type="text" maxlength="1"></td>
+                        <td class="block"><div class="number-label">6</div><input class="d1 m1" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d1 m4" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d1" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="block"><input class="m3" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m2" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m1" type="text" maxlength="1"></td>
+                        <td class="block"><input class="m4" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m1" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="transparent"></td>
+                        <td class="block"><div class="number-label">5</div><div class="number-label-double">10</div><input class="d5 m5" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d5" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d5" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d5" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d5" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d5 m1" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m5" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><div class="number-label">4</div><input class="m1 d4" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d4" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d4" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d4" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d4" type="text" maxlength="1"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m5" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m1" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m5" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="block"><div class="number-label">3</div><input class="d3" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d3 m1" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d3" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d3" type="text" maxlength="1"></td>
+                        <td class="block"><input class="d3" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m5" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="transparent"></td>
+                        <td class="block"><input class="m5" type="text" maxlength="1"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                        <td class="transparent"></td>
+                    </tr>
+                    <tr style="height: 1px;">
+                        <td colspan="11"></td>
+                    </tr>
+
+
+                </table>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
